@@ -1,0 +1,70 @@
+model di folder app
+view di folder resource
+controller di app>http
+
+migrate update
+down tu rollback
+fresh untuk update kolom
+
+
+make controller
+php artisan make:model -m Post
+
+masukin data banyak
+Post::create([
+.   'title' => 'Judul ketiga',
+.   'excerpt' => 'Lorem ipsum ketiga',
+.   'slug'=>'judul-ketiga',
+.   'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint rem autem aspernatur commodi laudantium minima earum nemo aut id soluta, molestiae repudiandae architecto?</p><p> Sequi eos temporibus earum similique ipsa placeat, rem quibusdam. A repudiandae nihil quod. Aliquam, perferendis explicabo? Necessitatibus dolores inventore quisquam fugit odio consequatur, nobis nulla architecto consequuntur cum libero laborum, eveniet repudiandae?</p><p> Nemo maxime iusto corrupti qui praesentium, consequatur cupiditate perferendis quisquam exercitationem sapiente maiores, recusandae voluptatem minus distinctio quam placeat ad quas nostrum, quidem illo dicta. Necessitatibus ex minus nobis excepturi magnam expedita amet eius similique nesciunt voluptatibus et sint nisi sed reprehenderit quaerat, sapiente deserunt ipsa animi voluptatem illum, eaque sequi! Maxime aspernatur animi perferendis itaque est. Quis, cumque ad, quisquam error quae dolore et vero eveniet fuga a natus repellendus? Autem minima nobis soluta, cupiditate libero eveniet. Obcaecati totam delectus tempora, maiores sapiente quis dolore voluptatibus magnam, odit quidem in, velit ratione? In, dolor.</p>'
+.   ])
+
+update post 
+post::find(id)->update(['namakolom'=>'isibaru'])
+
+JOIN DU LARAVEL
+
+php artisan make:model namamodel -mfs
+m migrate
+f factory
+s seeder
+
+
+tahapan bikin web
+pertama bikin model abis itu bikin viewnya trus hubung hubungin bisa menggunakan controller
+
+
+autentikasi butuh middleware
+
+
+
+php artisan make:controller PhotoController --model=Photo --resource untuk membuat resource controller
+
+
+
+
+17. buat dashboard 
+buat dashboard resource controller
+buat route
+
+18. 
+method create
+sllug making
+dari create index ke web ke controller
+create form menggunakan trix editor
+
+21. cara mengubah lokasi image copy environmen ke env
+tidak bisa langsung diakses karena belum dihubungkan
+php artisan storage:link
+
+23. tambah field
+add_is_admin_to_users_table, new-> no, modify->yes
+
+lalu isi di file nya
+
+php artisan migrate hanya menjalankan yang belom jalan
+
+kalo gajadi
+php artisan migrate:rollback
+
+otak atik middleware di app\Http\Middleware
+otak atik gate di app\Providers\AppServiceProvider.php
